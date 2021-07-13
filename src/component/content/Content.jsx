@@ -47,12 +47,9 @@ function Content() {
             })}
         </div>
         <Button className={MUIclasses.addButton} variant="outlined" color="primary" onClick={openMenteeModal} endIcon={<ButtonArrow/>}>
-            <svg className="MuiSvgIcon-root jss82 MuiSvgIcon-fontSizeSmall" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style={{'width': '18px','fill': 'white'}}>
-                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
-            </svg>
             Add Request
         </Button>
-        {isMenteeModalOpen && <SimpleModal body={<MenteeInput setIsOpen={setIsMenteeModalOpen}></MenteeInput>} isOpen={isMenteeModalOpen}></SimpleModal>}
+        {isMenteeModalOpen && <SimpleModal body={<MenteeInput setOpen={setIsMenteeModalOpen}></MenteeInput>} open={isMenteeModalOpen} setOpen={setIsMenteeModalOpen}></SimpleModal>}
     </div>
 }
 

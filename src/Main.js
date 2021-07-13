@@ -22,6 +22,7 @@ function Main() {
       enqueueSnackbar(error.message ? error.message : error, {
         variant: severity || error.severity,
         autoHideDuration: 1200,
+        
         anchorOrigin: { vertical: "top", horizontal: "center" },
       });
     //eslint-disable-next-line

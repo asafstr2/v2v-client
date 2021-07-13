@@ -6,7 +6,7 @@ function BubbleModal() {
     const { id } = useParams();
     return (
         <div className='bubble-modal-wrapper'>
-            <SimpleModal body={<Bubble type={"modalBubble"}></Bubble>} isOpen={true}>
+            <SimpleModal body={<Bubble title={"modalBubble"}></Bubble>} isOpen={true}>
             </SimpleModal>
         </div>
     )

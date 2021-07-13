@@ -19,9 +19,8 @@ const useStyles = makeStyles(theme=>({
         textAlign:'left'
     },
     addButton:{
-        padding:12,
         color:theme.palette.secondary.main,
-        alignSelf:'flex-end'
+        float: 'right',
 
     },
     circleBg: {
@@ -53,16 +52,18 @@ function Content() {
     const MUIclasses = useStyles()
 
     return <div className={classes.content}>
-        <Typography className={MUIclasses.title}>What would you like to learn today?</Typography>
-        <div className={classes.buttonsWrapper}>
-            {bubbleList.map((bubble) => {
-                return <Bubble key={bubble.id || bubble._id} type={bubble.title}>{bubble.desc}</Bubble>
-            })}
-        </div>
-        <Button className={MUIclasses.addButton} variant="outlined" color="primary" onClick={openMenteeModal} endIcon={<ButtonArrow/>}>
-            Add Request
-        </Button>
-        {isMenteeModalOpen && <SimpleModal body={<MenteeInput setOpen={setIsMenteeModalOpen}></MenteeInput>} open={isMenteeModalOpen}></SimpleModal>}
+            <div className={classes.innerWrapper}>
+                <Typography className={MUIclasses.title}>What would you like to learn today?</Typography>
+                <div className={classes.buttonsWrapper}>
+                    {bubbleList.map((bubble) => {
+                        return <Bubble key={bubble.id || bubble._id} title={bubble.title}>{bubble.title}</Bubble>
+                    })}
+                </div>
+                <Button className={MUIclasses.addButton} variant="outlined" color="primary" onClick={openMenteeModal} endIcon={<ButtonArrow/>}>
+                    Add Request
+                </Button>
+                {isMenteeModalOpen && <SimpleModal body={<MenteeInput setOpen={setIsMenteeModalOpen}></MenteeInput>} open={isMenteeModalOpen}></SimpleModal>}
+            </div>
         <CircleBg className={MUIclasses.circleBg} />
     </div>
 }

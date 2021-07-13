@@ -9,18 +9,17 @@ const initialState = {
 export default function(state = initialState, action) {
     switch (action.type) {
         case ADD_BUBBLE: {
-            const { id, content } = action.payload;
+            if (action.payload._id) {
+                let newState = [...state.all];
+                newState.pop();
+                return {
+                    ...state,
+                    newState
+                };
+            }
             return {
                 ...state,
-                allIds: [...state.allIds, id],
-                byIds: {
-                    ...state.byIds,
-                    [id]: {
-                        content,
-                        completed: false
-                    }
-                },
-                all: state.all.concat({content, completed: false, id})
+                all: [...state.all, action.payload]
             };
         }
         default:

@@ -29,9 +29,9 @@ import { addError } from "./error";
 //     updatedAt: '2021-07-13T11:40:44.460Z',
 //     __v: 0 }
 
-export const loadbubbeles = (bubbeles) => ({ type: LOAD_BUBBELES, bubbeles });
+export const loadbubbeles = (bubbeles) => ({ type: LOAD_BUBBELES, payload: bubbeles });
 export const add = (newBubbele) => ({ type: ADD_BUBBLE, payload: newBubbele });
-export const bubbeleById = (bubbele) => ({ type: GET_BY_ID, bubbele });
+export const bubbeleById = (bubbele) => ({ type: GET_BY_ID, payload: bubbele });
 export const edit = (id, res) => ({
   type: EDIT_BUBBELE,
   id,
@@ -44,25 +44,28 @@ export const postNewbubbeles = (obj) => async (dispatch, getState) => {
     dispatch(addError("must be an object and is " + typeof obj));
     return;
   }
-  if (!obj.has("desc") || obj.get("desc") === "") {
-    dispatch(addError("desc is a must and cant be " + obj.get("desc")));
-    return;
-  }
-  if (!obj.has("title") || obj.get("title") === "") {
-    dispatch(addError("title is a must and cant be " + obj.get("title")));
-    return;
-  }
+  // if (!obj.has("desc") || obj.get("desc") === "") {
+  //   dispatch(addError("desc is a must and cant be " + obj.get("desc")));
+  //   return;
+  // }
+  // if (!obj.has("title") || obj.get("title") === "") {
+  //   dispatch(addError("title is a must and cant be " + obj.get("title")));
+  //   return;
+  // }
   const { id } = currentUser.user;
-  if (id)
-    return apiCall("post", `/api/users/${id}/bubbele`, obj)
-      .then((res) => dispatch(add(res)))
-      .catch((err) => {
-        console.log("this is where we are failing:", err);
-        dispatch(addError(err?.message));
-      });
+  if (id) {
+      dispatch(add(obj));
+      return apiCall("post", `/api/users/${id}/bubbele`, obj)
+          .then((res) => dispatch(add(res)))
+          .catch((err) => {
+              console.log("this is where we are failing:", err);
+              dispatch(addError(err?.message));
+          });
+  }
   else return;
 };
 
+// Get ALL Bubbles
 export function fetchbubbeles() {
   return (dispatch) => {
     return apiCall("get", `/api/bubbels`)

@@ -19,14 +19,10 @@ function Content() {
         setIsMenteeModalOpen(!isMenteeModalOpen);
     }
 
-    const addBubble = (text) => {
-        dispatch(addTodo('text12312131'));
-    }
-
     return <div className={classes.content}>
         <div className={classes.buttonsWrapper}>
             {bubbleList.map((bubble) => {
-                return <Bubble key={bubble.id} type={bubble.content}>{bubble.content}</Bubble>
+                return <Bubble key={bubble.id} type={bubble.title}>{bubble.desc}</Bubble>
             })}
         </div>
         <Button className={classes.addBubble} variant="contained" color="primary" onClick={openMenteeModal}>
@@ -35,7 +31,7 @@ function Content() {
             </svg>
             Action
         </Button>
-        {isMenteeModalOpen && <SimpleModal body={<MenteeInput></MenteeInput>} isOpen={true}></SimpleModal>}
+        {isMenteeModalOpen && <SimpleModal body={<MenteeInput setIsOpen={setIsMenteeModalOpen}></MenteeInput>} isOpen={isMenteeModalOpen}></SimpleModal>}
     </div>
 }
 

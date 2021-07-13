@@ -37,10 +37,6 @@ export function setAuthorizationTokenHeader(token) {
 export function authUser(methods, userData, type = 'signup') {
 	return (dispatch, getState) => {
 		//wrap our thunk in a promise so we can wait for the API call to resolve
-		let inviter = localStorage.getItem('inviter')
-		if (type === 'signup' && inviter)
-			userData = { ...userData, invitedBy: JSON.parse(inviter) }
-		console.log({ type })
 		return new Promise((resolve, reject) => {
 			let method = methods === 'edit' ? 'put' : 'post'
 			return apiCall(method, `/api/auth/${type}`, userData) //send the request to the API with the user data from the form and type wich is signup or signin

@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import GoogleLogin from 'react-google-login'
 import { makeStyles } from '@material-ui/core'
-import { ReactComponent as GoogleIcon } from '../../icons/GoogleIcon.svg'
-import { authUser } from '../../store/actions/auth'
+import { ReactComponent as GoogleIcon } from '../icons/GoogleIcon.svg'
+import { authUser } from '../../redux/actions/auth'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router'
-import { setPasswordHighlight } from '../../store/actions/auth'
+import { setPasswordHighlight } from '../../redux/actions/auth'
 
 const useStyles = makeStyles(theme => ({
 	socialMediaIconBox: extended => ({

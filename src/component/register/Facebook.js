@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import { initFacebookSdk } from './initFacebookSdk'
-import { ReactComponent as FacebookIcon } from '../../icons/FacebookIcon.svg'
+import { ReactComponent as FacebookIcon } from '../icons/FacebookIcon.svg'
 import Box from '@material-ui/core/Box'
 import axios from 'axios'
-import { authUser } from '../../store/actions/auth'
+import { authUser } from '../../redux/actions/auth'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router'
-import { setPasswordHighlight } from '../../store/actions/auth'
+import { setPasswordHighlight } from '../../redux/actions/auth'
 export default function Facebook({
 	setstate,
 	state,

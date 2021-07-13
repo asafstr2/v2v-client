@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css?family=SF+Pro%20Text:200|Nunito:300,900,700,400,800,600");
+
+.sign-in {
+  width: 100%;
+  min-width: 360px;
+  min-height: 640px;
+  position: relative;
+  margin: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0);
+}
+a {
+  text-decoration: none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.anima-full-width-a {
+  width: 100%;
+}
+.anima-full-height-a {
+  height: 100%;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.sign-in .rectangle-450 {
+  background-color: rgba(255, 255, 255, 1);
+  top: 510px;
+  height: 45px;
+  width: 44px;
+  position: absolute;
+  margin: 0;
+  left: 131px;
+  border-radius: 7px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: rotate(0deg);
+  opacity: 1;
+}
+.sign-in .rectangle-461 {
+  background-color: rgba(255, 255, 255, 1);
+  top: 510px;
+  height: 45px;
+  width: 44px;
+  position: absolute;
+  margin: 0;
+  left: 186px;
+  border-radius: 7px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: rotate(0deg);
+  opacity: 1;
+}
+.ellipse2 {
+  background-color: rgba(255, 255, 255, 0);
+  top: -20px;
+  left: 72px;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  margin: 0;
+  transform: scale(3.3);
+}
+@media screen and (min-width: 1024px) {
+  .ellipse2 {
+    top: -226px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ellipse2 {
+    top: -20px;
+    left: 76px;
+  }
+}
+
+.sign-in .skip-3 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 26px;
+  height: auto;
+  box-sizing: border-box;
+  width: 63px;
+  position: absolute;
+  margin: 0;
+  left: 297px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0);
+  transform: rotate(0deg);
+  opacity: 1;
+  font-family: "Nunito", Helvetica, Arial, serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  color: rgba(60, 72, 88, 1);
+  text-align: left;
+  line-height: 24px;
+}
+.sign-in .h14 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 43px;
+  height: auto;
+  width: 305px;
+  position: absolute;
+  margin: 0;
+  left: 17px;
+  transform: rotate(0deg);
+  opacity: 1;
+  font-family: "Nunito", Helvetica, Arial, serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 40px;
+  color: rgba(31, 45, 61, 1);
+  text-align: left;
+  line-height: 40.36px;
+}
+.sign-in .lokali-logo5 {
+  height: 44px;
+}
+.sign-in .btn-login6 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 439px;
+  height: 50px;
+  width: 200px;
+  position: absolute;
+  margin: 0;
+  left: 80px;
+  transform: rotate(0deg);
+  opacity: 1;
+}
+.sign-in .btn-login6 .rectangle-440 {
+  background-color: rgba(0, 0, 0, 1);
+  top: 0px;
+  height: 50px;
+  width: 200px;
+  position: absolute;
+  margin: 0;
+  left: 0px;
+  border-radius: 30px;
+  box-shadow: 0px -1px 6px rgba(0, 0, 0, 0.25);
+  transform: rotate(0deg);
+  opacity: 1;
+}
+.sign-in .btn-login6 .h11 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 14px;
+  height: auto;
+  width: 152px;
+  position: absolute;
+  margin: 0;
+  left: 25px;
+  transform: rotate(0deg);
+  opacity: 1;
+  font-family: "Nunito", Helvetica, Arial, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  color: rgba(248, 216, 1, 1);
+  text-align: center;
+  line-height: 18.16px;
+}
+.sign-in .line-97 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 279px;
+  width: 320px;
+  border: none;
+  border-bottom: 4px solid black;
+  position: absolute;
+  padding-bottom: 6px;
+  left: 20px;
+}
+.sign-in .line-96x {
+  background-color: rgba(255, 255, 255, 0);
+  top: 30%;
+  width: 320px;
+  border: none;
+  border-bottom: 4px solid black;
+  position: absolute;
+  padding-bottom: 6px;
+  left: 20px;
+}
+.sign-in .line-108 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 350px;
+  width: 320px;
+  border: none;
+  border-bottom: 4px solid black;
+  padding-bottom: 6px;
+  position: absolute;
+  left: 20px;
+}
+
+.sign-in .vector12 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 522px;
+  height: 23px;
+  width: 23px;
+  position: absolute;
+  margin: 0;
+  left: 197px;
+  transform: rotate(0deg);
+}
+.sign-in .body13 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 486px;
+  height: auto;
+  width: auto;
+  position: absolute;
+  margin: 0;
+  left: 142px;
+  transform: rotate(0deg);
+  opacity: 1;
+  font-family: "Nunito", Helvetica, Arial, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 11px;
+  color: rgba(31, 45, 61, 1);
+  text-align: left;
+  line-height: 17px;
+}
+.sign-in .vector14 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 521px;
+  height: 28px;
+  width: 14px;
+  position: absolute;
+  margin: 0;
+  left: 146px;
+  transform: rotate(0deg);
+}
+.sign-in .already-have-an-account-log-in15 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 591px;
+  height: auto;
+  box-sizing: border-box;
+  width: 268px;
+  position: absolute;
+  margin: 0;
+  left: 47px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0);
+  transform: rotate(0deg);
+  opacity: 1;
+  font-family: "Nunito", Helvetica, Arial, serif;
+  font-size: 14px;
+  color: rgba(60, 72, 88, 1);
+  text-align: center;
+  line-height: 24px;
+}
+.sign-in .already-have-an-account-log-in15 .span1 {
+  font-family: "Nunito", Helvetica, Arial, serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  color: rgba(60, 72, 88, 1);
+  line-height: 24px;
+}
+.sign-in .already-have-an-account-log-in15 .span2 {
+  font-family: "Nunito", Helvetica, Arial, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+  color: rgba(60, 72, 88, 1);
+  line-height: 24px;
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity: 0;
+  display: block;
+  -webkit-animation: anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation: anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation: anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation: anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity: 1;
+  display: block;
+  -webkit-animation: anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation: anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation: anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation: anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay: 0;
+  animation-delay: 0;
+}
+@-webkit-keyframes anima-reveal {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes anima-reveal {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes anima-reveal {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes anima-reveal {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.anima-component-wrapper,
+.anima-component-wrapper * {
+  pointer-events: none;
+}
+.anima-component-wrapper a *,
+.anima-component-wrapper a,
+.anima-component-wrapper input,
+.anima-component-wrapper video,
+.anima-component-wrapper iframe,
+.anima-listeners-active,
+.anima-listeners-active * {
+  pointer-events: auto;
+}
+.anima-hidden,
+.anima-hidden * {
+  visibility: hidden;
+  pointer-events: none;
+}
+.anima-smart-layers-pointers,
+.anima-smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+.anima-component-wrapper.anima-not-ready,
+.anima-component-wrapper.anima-not-ready * {
+  visibility: hidden !important;
+}
+.anima-listeners-active-click,
+.anima-listeners-active-click * {
+  cursor: pointer;
+}
+.anima-word-break {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+  word-break: break-word;
+}

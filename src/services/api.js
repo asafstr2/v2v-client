@@ -18,7 +18,7 @@ export function apiCall(method, path, data) {
 		if (!(path.includes('api') || path.includes('admin'))) return
 		let finelPath = path
 		if (process.env.NODE_ENV === 'production') {
-			finelPath = `https://lokaliforyou-server.herokuapp.com${path}`
+			finelPath = `https:/server.herokuapp.com${path}`
 		}
 		return axios[method](finelPath, data)
 			.then(res => {

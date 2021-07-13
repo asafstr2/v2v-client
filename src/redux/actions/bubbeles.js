@@ -44,14 +44,7 @@ export const postNewbubbeles = (obj) => async (dispatch, getState) => {
     dispatch(addError("must be an object and is " + typeof obj));
     return;
   }
-  // if (!obj.has("desc") || obj.get("desc") === "") {
-  //   dispatch(addError("desc is a must and cant be " + obj.get("desc")));
-  //   return;
-  // }
-  // if (!obj.has("title") || obj.get("title") === "") {
-  //   dispatch(addError("title is a must and cant be " + obj.get("title")));
-  //   return;
-  // }
+
   const { id } = currentUser.user;
   if (id) {
       dispatch(add(obj));

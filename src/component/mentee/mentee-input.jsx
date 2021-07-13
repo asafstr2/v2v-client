@@ -13,7 +13,6 @@ function MenteeInput({setOpen}) {
         setQuestion({title: e.target.value, desc: "descTest", category: 'tech', tags: 'tech,react'})
     }
     const onSubmit = (e) => {
-        debugger
         e.preventDefault();
         dispatch(postNewbubbeles(question));
         setOpen(false);

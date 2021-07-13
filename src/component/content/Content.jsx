@@ -1,5 +1,5 @@
 import Bubble from "../bubble/Bubble";
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Button} from "@material-ui/core";
 import {useDispatch, useSelector} from "react-redux";
 import {addTodo} from "../../redux/actions";
@@ -8,6 +8,9 @@ import SimpleModal from "../modal/simple-modal";
 import MenteeInput from "../mentee/mentee-input";
 import { Typography ,makeStyles} from "@material-ui/core";
 import { ReactComponent as ButtonArrow } from "../../assets/ButtonArrow.svg";
+import { ReactComponent as CircleBg } from '../../assets/Circle.svg'
+import {fetchbubbeles, postNewbubbeles} from "../../redux/actions/bubbeles";
+
 const useStyles = makeStyles(theme=>({
     title:{
         color:theme.palette.secondary.main,
@@ -20,6 +23,12 @@ const useStyles = makeStyles(theme=>({
         color:theme.palette.secondary.main,
         alignSelf:'flex-end'
 
+    },
+    circleBg: {
+        position: 'absolute',
+        right: '85.5px',
+        top: '184px',
+        zIndex: '-1',
     }
 }))
 function Content() {
@@ -29,6 +38,10 @@ function Content() {
     const bubbleList = useSelector((state) => {
         return state.bubbles.all;
     })
+
+    useEffect(() => {
+        dispatch(fetchbubbeles());
+    }, [])
 
     const openMenteeModal = () => {
         setIsMenteeModalOpen(!isMenteeModalOpen);
@@ -43,16 +56,14 @@ function Content() {
         <Typography className={MUIclasses.title}>What would you like to learn today?</Typography>
         <div className={classes.buttonsWrapper}>
             {bubbleList.map((bubble) => {
-                return <Bubble key={bubble.id} type={bubble.title}>{bubble.desc}</Bubble>
+                return <Bubble key={bubble.id || bubble._id} type={bubble.title}>{bubble.desc}</Bubble>
             })}
         </div>
         <Button className={MUIclasses.addButton} variant="outlined" color="primary" onClick={openMenteeModal} endIcon={<ButtonArrow/>}>
-            <svg className="MuiSvgIcon-root jss82 MuiSvgIcon-fontSizeSmall" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style={{'width': '18px','fill': 'white'}}>
-                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
-            </svg>
             Add Request
         </Button>
         {isMenteeModalOpen && <SimpleModal body={<MenteeInput setIsOpen={setIsMenteeModalOpen}></MenteeInput>} isOpen={isMenteeModalOpen}></SimpleModal>}
+        <CircleBg className={MUIclasses.circleBg} />
     </div>
 }
 

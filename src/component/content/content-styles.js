@@ -6,7 +6,6 @@ const contentStyles = makeStyles(() => ({
         justifyContent: 'center',
         flexDirection: 'column',
         margin: '0 auto 30px',
-        width:'72%'
     },
     buttonsWrapper: {
         display: 'flex',

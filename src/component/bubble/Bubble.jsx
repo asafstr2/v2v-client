@@ -8,7 +8,6 @@ function Bubble({type}) {
             <Button className={classes.button} variant="contained">
                 {type}
             </Button>
-            <img className={classes.plus}  src={'Plus.png'} alt={'plus'}></img>
         </div>
     )
 }

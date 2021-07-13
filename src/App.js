@@ -11,7 +11,10 @@ import { Provider } from "react-redux";
 import { SnackbarProvider } from 'notistack'
 import { BrowserRouter as Router } from 'react-router-dom'
 import Main from './Main'
+import { theme } from "./theme/theme";
+import { ThemeProvider } from "@material-ui/styles";
 const store = configureStore();
+
 
 //checking to see after a refresh if token exists in session storage if it does we verify the validaty of it with decode and also sending it via axios to server with next request if tempered with force logout user
 if (localStorage.jwtTokenv2v) {
@@ -26,16 +29,16 @@ if (localStorage.jwtTokenv2v) {
 function App() {
   return (
     <div className="App">
-      <header>
-        <img src={"logo.svg"} alt={"logo"} />
-      </header>
-      <SnackbarProvider>
-        <Provider store={store}>
-          <Router>
-            <Main></Main>
-          </Router>
-        </Provider>
-      </SnackbarProvider>
+      <ThemeProvider theme={theme}>
+        <SnackbarProvider>
+          <Provider store={store}>
+            <Router>
+              <Main></Main>
+            </Router>
+          </Provider>
+        </SnackbarProvider>
+      </ThemeProvider>
+
     </div>
   );
 }

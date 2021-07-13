@@ -11,16 +11,17 @@ function MenteeInput({setIsOpen}) {
     const handleOnChange = (e) => {
         setQuestion({title: e.target.value, desc: "descTest", category: 'tech', tags: 'tech,react'})
     }
-    const onSubmit = () => {
+    const onSubmit = (e) => {
+        e.preventDefault();
         dispatch(postNewbubbeles(question));
         setIsOpen(false);
     }
     return (
         <div className={classes.wrapper}>
-            {/*<form className={classes.root} noValidate autoComplete="off">*/}
+            <form className={classes.root} noValidate autoComplete="off" onSubmit={onSubmit}>
                 <TextField className={classes.input} placeholder="Type your question" onChange={handleOnChange}/>
-            {/*</form>*/}
-            <Button onClick={onSubmit}>Submit</Button>
+            </form>
+            <Button type={'submit'}>Submit</Button>
         </div>
     )
 }

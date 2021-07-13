@@ -5,7 +5,7 @@ const bubbleStyles = makeStyles(() => ({
         // display: 'flex',
         // flexDirection: 'column',
         // alignItems: 'center',
-        margin: '60px 0 30px',
+        margin: '60px 0 0',
         // height: '100%',
         boxShadow: '0px 10px 20px rgb(41 41 42 / 7%)',
         borderRadius: '8px',

@@ -11,7 +11,7 @@ import { configureStore } from "./redux";
 import { Provider } from "react-redux";
 import { SnackbarProvider } from 'notistack'
 import { BrowserRouter as Router } from 'react-router-dom'
-
+import Main from './Main'
 const store = configureStore();
 
 //checking to see after a refresh if token exists in session storage if it does we verify the validaty of it with decode and also sending it via axios to server with next request if tempered with force logout user
@@ -33,7 +33,7 @@ function App() {
       <SnackbarProvider>
         <Provider store={store}>
           <Router>
-            <AppContent></AppContent>
+            <Main></Main>
           </Router>
         </Provider>
       </SnackbarProvider>

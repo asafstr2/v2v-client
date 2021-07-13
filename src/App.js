@@ -1,13 +1,14 @@
 import './App.css';
 import React from 'react';
-import { Button } from '@material-ui/core';
+import AppContent from "./component/Content";
+import './component/header.css';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Button color="primary">Hello World</Button>
-      </header>
+        <header><img src={'logo.svg'} alt={'logo'}/></header>
+        <AppContent></AppContent>
     </div>
   );
 }

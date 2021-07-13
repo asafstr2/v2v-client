@@ -1,0 +1,7 @@
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background: white;
+    box-shadow: 0 5px 15px 0 #afb4b7;
+}

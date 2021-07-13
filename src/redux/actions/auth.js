@@ -24,7 +24,7 @@ export function setPasswordHighlight(payload) {
 
 export function logout() {
 	return dispatch => {
-		localStorage.removeItem('jwtToken')
+		localStorage.removeItem('jwtTokenv2v')
 		setAuthorizationTokenHeader(false)
 		dispatch(setCurrentUser())
 	}
@@ -46,7 +46,7 @@ export function authUser(methods, userData, type = 'signup') {
 			return apiCall(method, `/api/auth/${type}`, userData) //send the request to the API with the user data from the form and type wich is signup or signin
 				.then(({ token, ...user }) => {
 					// we deconstruct the Token  and user from the response
-					localStorage.setItem('jwtToken', token) //save the token to session storage
+					localStorage.setItem('jwtTokenv2v', token) //save the token to session storage
 					setAuthorizationTokenHeader(token)
 					dispatch(setCurrentUser(user)) //updating redux that someone logge in +the user that currently logged in
 					dispatch(removeError()) //if the server was withou Error so remove any error from this redux state

@@ -62,7 +62,7 @@ function Content() {
         <Button className={MUIclasses.addButton} variant="outlined" color="primary" onClick={openMenteeModal} endIcon={<ButtonArrow/>}>
             Add Request
         </Button>
-        {isMenteeModalOpen && <SimpleModal body={<MenteeInput setIsOpen={setIsMenteeModalOpen}></MenteeInput>} isOpen={isMenteeModalOpen}></SimpleModal>}
+        {isMenteeModalOpen && <SimpleModal body={<MenteeInput setOpen={setIsMenteeModalOpen}></MenteeInput>} open={isMenteeModalOpen}></SimpleModal>}
         <CircleBg className={MUIclasses.circleBg} />
     </div>
 }

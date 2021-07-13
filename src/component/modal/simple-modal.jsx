@@ -2,13 +2,8 @@ import React from 'react';
 import Modal from '@material-ui/core/Modal';
 import modalStyles from "./modal-styles";
 
-export default function SimpleModal({body, isOpen}) {
+export default function SimpleModal({body, open, setOpen}) {
     const classes = modalStyles();
-    const [open, setOpen] = React.useState(isOpen || false);
-
-    const handleOpen = () => {
-        setOpen(true);
-    };
 
     const handleClose = () => {
         setOpen(false);
@@ -16,10 +11,6 @@ export default function SimpleModal({body, isOpen}) {
 
     return (
         <div className={classes.modal}>
-            {/*<button type="button" onClick={handleOpen}>*/}
-            {/*    Open Modal*/}
-            {/*</button>*/}
-
             <Modal
                 open={open}
                 onClose={handleClose}

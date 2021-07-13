@@ -1,30 +1,32 @@
 const {makeStyles} = require("@material-ui/core/styles");
 
-const menteeStyles = makeStyles(() => ({
+const menteeStyles = makeStyles((theme) => ({
     wrapper: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100%'
+        height: '100%',
     },
-    input: {
-        width: '823px',
-        height: '223px',
-        background: 'white',
-        boxShadow: '0px 4px 16px rgba(0, 0, 0, 0.2)',
-        borderRadius: '8px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-
-        "& input": {
-            border: '2px solid #00ADEF',
-            borderRadius: '6px',
-            paddingLeft: '1%',
-            width: '716px',
-
-        }
+    root:{
+        background:'white',
+        height:'500px',
+        width:'500px',
+        display:'flex',
+        flexDirection:'column',
+        padding:20,
+        borderRadius:10,
+        justifyContent:'space-around'
     },
+    title:{
+        fontSize:32,
+        fontWeight:700,
+        color:theme.palette.primary.main
+    },
+    select:{
+        border:'1px solid',
+        borderRadius:10
+    }
+
 }))
 
 export default menteeStyles;

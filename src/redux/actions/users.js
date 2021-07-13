@@ -3,6 +3,26 @@ import { GET_USER, SET_CURRENT_USER } from '../actionTypes'
 import { addError } from '../actions/error'
 import { setAuthorizationTokenHeader,logout } from './auth'
 
+
+
+//  { saved: [],
+//     upcoming: [],
+//     birthday: '2021-07-13T11:40:42.065Z',
+//     roles: [ 'admin' ],
+//     facebookId: '',
+//     googleId: '',
+//     stats: { attended: 1, mentored: 5 },
+//     bubbelsAttending: [],
+//     bubbelsMentoring: [],
+//     _id: '60ed7bbc3752ad9f19c966ce',
+//     username: 'Zell',
+//     email: 'testing@gmail.com',
+//     password: '$2a$10$fqisX3OYiMRHURgwuPsGHOJAoNFLRhSKaAdKKQYRGNOcczHPTgQiS',
+//     createdAt: '2021-07-13T11:40:44.165Z',
+//     updatedAt: '2021-07-13T11:40:44.165Z',
+//     __v: 0 }
+
+
 export const getUser = user => ({ type: GET_USER, user })
 export const edit = user => ({ type: SET_CURRENT_USER, user })
 

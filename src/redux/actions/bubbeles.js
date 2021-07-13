@@ -61,7 +61,7 @@ export const postNewbubbeles = (obj) => async (dispatch, getState) => {
 // Get ALL Bubbles
 export function fetchbubbeles() {
   return (dispatch) => {
-    return apiCall("get", `/api/bubbels`)
+    return apiCall("get", `/api/bubbeles`)
       .then((res) => dispatch(loadbubbeles(res)))
       .catch((err) => dispatch(addError(err?.message)));
   };

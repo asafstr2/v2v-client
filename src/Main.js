@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useSnackbar } from "notistack";
 import { connect, useDispatch, useSelector } from "react-redux";
 import { Route, Switch, withRouter } from "react-router";
-import AppContent from "./component/Content";
+import AppContent from "./component/content/Content";
 import LoginModal from "./component/register/LoginModal";
 import { authUser, getStats, getUpComing } from "./redux/actions/auth";
 import { removeError } from "./redux/actions/error";
+import BubbleModal from "./component/bubble-modal/BubbleModal";
 
 
 function Main() {
@@ -41,6 +42,7 @@ function Main() {
       />
       <Switch>
         <Route exact path="/" render={(_props) => <AppContent {..._props} />} />
+        <Route exact path="/:id" render={(_props) => <BubbleModal {..._props} />} />
       </Switch>
     </div>
   );

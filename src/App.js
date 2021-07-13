@@ -1,6 +1,5 @@
 import "./App.css";
 import React from "react";
-import AppContent from "./component/Content";
 import "./component/header.css";
 import {
   setAuthorizationTokenHeader,

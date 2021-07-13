@@ -15,7 +15,7 @@ export default function SimpleModal({body, isOpen}) {
     };
 
     return (
-        <div>
+        <div className={classes.modal}>
             {/*<button type="button" onClick={handleOpen}>*/}
             {/*    Open Modal*/}
             {/*</button>*/}

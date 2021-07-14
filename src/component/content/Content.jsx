@@ -56,7 +56,7 @@ function Content() {
         <Typography className={MUIclasses.title}>What would you like to learn today?</Typography>
         <div className={classes.buttonsWrapper}>
             {bubbleList.map((bubble) => {
-                return <Bubble key={bubble.id || bubble._id} type={bubble.title}>{bubble.desc}</Bubble>
+                return <Bubble key={bubble.id || bubble._id} type={bubble.title} id={bubble.id || bubble._id}>{bubble.desc}</Bubble>
             })}
         </div>
         <Button className={MUIclasses.addButton} variant="outlined" color="primary" onClick={openMenteeModal} endIcon={<ButtonArrow/>}>

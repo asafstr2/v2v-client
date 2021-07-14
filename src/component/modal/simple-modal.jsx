@@ -10,7 +10,8 @@ export default function SimpleModal({body, open, setOpen}) {
     };
 
     return (
-        <div className={classes.modal}>
+            
+        <div >
             <Modal
                 open={open}
                 onClose={handleClose}

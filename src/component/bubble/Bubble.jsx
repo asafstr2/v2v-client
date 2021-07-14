@@ -1,11 +1,11 @@
 import Button from '@material-ui/core/Button';
 import bubbleStyles from "./bubble-styles";
 
-function Bubble({type}) {
+function Bubble({type, id}) {
     const classes = bubbleStyles();
     return (
         <div className={classes.bubble}>
-            <Button className={classes.button} variant="contained">
+            <Button href={`/${id}`} className={classes.button} variant="contained">
                 {type}
             </Button>
         </div>

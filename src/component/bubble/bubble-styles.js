@@ -5,11 +5,11 @@ const bubbleStyles = makeStyles(() => ({
         // display: 'flex',
         // flexDirection: 'column',
         // alignItems: 'center',
-        margin: '60px 0 0',
+        margin: '60px 0 0 30px',
         // height: '100%',
         boxShadow: '0px 10px 20px rgb(41 41 42 / 7%)',
         borderRadius: '8px',
-        width: '255px',
+        // width: '255px',
         height: '200px',
         display: 'flex',
         flexDirection: 'column',
@@ -18,6 +18,18 @@ const bubbleStyles = makeStyles(() => ({
         color: '#18191F',
         position: 'relative',
         background: 'white',
+        transition: 'box-shadow 0.3s ease-in-out',
+        cursor: 'pointer',
+
+        '&:hover': {
+            // outline: '1px solid #0088CC',
+            boxShadow: '0px 5px 10px #0088cc',
+        }
+    },
+    close: {
+        width: '20px',
+        position: 'absolute',
+        right: '20px',
     },
     title: {
         fontWeight: '600',

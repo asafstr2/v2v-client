@@ -7,6 +7,7 @@ export const PASSWORD_NEEDED = 'PASSWORD_NEEDED'
 export const ADD_ERROR = 'ADD_ERROR'
 export const REMOVE_ERROR = 'REMOVE_ERROR'
 export const LOAD_BUBBELES = 'LOAD_BUBBELES'
+export const DELETE_BUBBELE = 'DELETE_BUBBELE'
 export const EDIT_BUBBELE = 'EDIT_BUBBELE'
 export const GET_BY_ID = 'GET_BY_ID'
 

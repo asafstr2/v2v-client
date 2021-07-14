@@ -1,4 +1,4 @@
-import {ADD_BUBBLE, LOAD_BUBBELES} from "../actionTypes";
+import {ADD_BUBBLE, DELETE_BUBBELE, LOAD_BUBBELES} from "../actionTypes";
 
 const initialState = {
     allIds: [],
@@ -26,6 +26,12 @@ export default function(state = initialState, action) {
             return {
                 all: action.payload
             }
+        }
+        case DELETE_BUBBELE: {
+            return {
+                ...state,
+                all: [...state.all.splice(0,1)]
+            };
         }
         default:
             return state;

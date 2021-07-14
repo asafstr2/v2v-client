@@ -2,6 +2,7 @@ const {makeStyles} = require("@material-ui/core/styles");
 
 const contentStyles = makeStyles(() => ({
     content: {
+        position: 'relative',
         display: 'flex',
         justifyContent: 'center',
         flexDirection: 'column',
@@ -12,12 +13,14 @@ const contentStyles = makeStyles(() => ({
         margin: '35px auto 0',
     },
     buttonsWrapper: {
-        display: 'flex',
+        // display: 'flex',
         // justifyContent: 'center',
         marginBottom: '50px',
         flexWrap: 'wrap',
-        justifyContent: 'space-between',
+        // justifyContent: 'space-between',
         minHeight: '580px',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3, 1fr)',
     },
 
 }))

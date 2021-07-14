@@ -10,6 +10,9 @@ import { Typography ,makeStyles} from "@material-ui/core";
 import { ReactComponent as ButtonArrow } from "../../assets/ButtonArrow.svg";
 import { ReactComponent as CircleBg } from '../../assets/Circle.svg'
 import {fetchbubbeles, postNewbubbeles} from "../../redux/actions/bubbeles";
+import NavMenu from "../nav-menu/NavMenu";
+import {useParams} from "react-router";
+import BubbleModal from "../bubble-modal/BubbleModal";
 
 const useStyles = makeStyles(theme=>({
     title:{
@@ -31,6 +34,7 @@ const useStyles = makeStyles(theme=>({
     }
 }))
 function Content() {
+    const { id } = useParams();
     const classes = contentStyles();
     const dispatch = useDispatch();
     const [isMenteeModalOpen, setIsMenteeModalOpen] = useState(false);
@@ -52,19 +56,21 @@ function Content() {
     const MUIclasses = useStyles()
 
     return <div className={classes.content}>
-            <div className={classes.innerWrapper}>
-                <Typography className={MUIclasses.title}>What would you like to learn today?</Typography>
-                <div className={classes.buttonsWrapper}>
-                    {bubbleList.map((bubble) => {
-                        return <Bubble key={bubble.id || bubble._id} title={bubble.title}>{bubble.title}</Bubble>
-                    })}
-                </div>
-                <Button className={MUIclasses.addButton} variant="outlined" color="primary" onClick={openMenteeModal} endIcon={<ButtonArrow/>}>
-                    Add Request
-                </Button>
-                {isMenteeModalOpen && <SimpleModal body={<MenteeInput setOpen={setIsMenteeModalOpen}></MenteeInput>} open={isMenteeModalOpen}></SimpleModal>}
+        <div className={classes.innerWrapper}>
+            <Typography className={MUIclasses.title}>What would you like to learn today?</Typography>
+            <div className={classes.buttonsWrapper}>
+                {bubbleList.map((bubble) => {
+                    return <Bubble key={bubble.id || bubble._id} title={bubble.title} desc={bubble.desc} id={bubble._id}>{bubble.title}</Bubble>
+                })}
             </div>
+            <Button className={MUIclasses.addButton} variant="outlined" color="primary" onClick={openMenteeModal} endIcon={<ButtonArrow/>}>
+                Add Request
+            </Button>
+            {isMenteeModalOpen && <SimpleModal body={<MenteeInput setOpen={setIsMenteeModalOpen}></MenteeInput>} open={isMenteeModalOpen}></SimpleModal>}
+        </div>
+        <NavMenu />
         <CircleBg className={MUIclasses.circleBg} />
+        {id ? (<SimpleModal body={<BubbleModal id={id}></BubbleModal>} open={true}></SimpleModal>) : null}
     </div>
 }
 

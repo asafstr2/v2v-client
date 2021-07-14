@@ -47,7 +47,7 @@ function Main() {
       <Switch>
         <Route exact path="/" render={(_props) => <AppContent {..._props} />} />
         <Route exact path='/onboarding' render={(props)=><Onboarding {...props}/>}/>
-        <Route exact path="/:id" render={(_props) => <BubbleModal {..._props} />} />
+        <Route exact path="/:id" render={(_props) => <AppContent {..._props} />} />
       </Switch>
     </div>
   );

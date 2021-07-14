@@ -9,7 +9,7 @@ const navMenuStyles = makeStyles(() => ({
         // height: '154px',
         position: 'absolute',
         right: 0,
-        bottom: 0,
+        top: '165px',
         background: 'white',
         border: '1px solid #EDF1F2',
         boxSizing: 'border-box',

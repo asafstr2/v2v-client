@@ -9,8 +9,7 @@ function MenteeInput({setOpen}) {
     const dispatch = useDispatch();
     const [question, setQuestion] = useState(null);
     const handleOnChange = (e) => {
-        setQuestion({...question, [e.target.name]: e.target.value})
-        setQuestion({title: e.target.value, desc: "descTest", category: 'tech', tags: 'tech,react'})
+        setQuestion({...question, category: 'tech', tags: 'tech,react', [e.target.name]: e.target.value})
     }
     const onSubmit = (e) => {
         e.preventDefault();

@@ -92,7 +92,7 @@ export const editBubbele =
     if (id)
       return apiCall(
         "put",
-        `/api/users/${id}/messeges/${bubbeleId}`,
+        `/api/users/${id}/bubbele/${bubbeleId}`,
         bubbleObject
       )
         .then((res) => {
@@ -109,13 +109,13 @@ export const addUserToBubbele =
     if (id)
       return apiCall(
         "put",
-        `/api/users/${id}/messeges/${bubbeleId}/addUserToBubbele`,
+        `/api/users/${id}/bubbele/${bubbeleId}/addUserToBubbele`,
         bubbleObject
       )
         .then((res) => {
           dispatch(edit(bubbeleId, res));
         })
-        .catch((err) => dispatch(addError(err.message)));
+        .catch((err) => dispatch(addError(err?.message)));
     else return;
   };
 
@@ -126,7 +126,7 @@ export const addMentorToBubbele =
     if (id)
       return apiCall(
         "put",
-        `/api/users/${id}/messeges/${bubbeleId}/addMentorToBubbele`,
+        `/api/users/${id}/bubbele/${bubbeleId}/addMentorToBubbele`,
         bubbleObject
       )
         .then((res) => {
@@ -135,3 +135,5 @@ export const addMentorToBubbele =
         .catch((err) => dispatch(addError(err.message)));
     else return;
   };
+
+

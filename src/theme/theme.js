@@ -9,6 +9,11 @@ export const theme = createTheme({
         secondary:{
             main:'#0088CC'
         }
+    },
+    typography: {
+        fontFamily: [
+            'Inter',
+        ].join(','),
     }
 })
 

@@ -23,7 +23,9 @@ const useStyles = makeStyles(theme=>({
     },
     addButton:{
         color:theme.palette.secondary.main,
-        float: 'right',
+        position: 'absolute',
+        top: '53px',
+        right: '285px',
 
     },
     circleBg: {

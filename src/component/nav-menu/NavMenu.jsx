@@ -7,7 +7,7 @@ import {
     Divider,
     Drawer,
     List,
-    ListItem,
+    ListItem, ListItemAvatar,
     ListItemIcon,
     ListItemText,
     ListSubheader,
@@ -36,27 +36,26 @@ function NavMenu() {
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
+            <ListSubheader>Most Active Mentors</ListSubheader>
             <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                            <Typography variant="h6" gutterBottom>
-                                Remy Sharp
-                            </Typography>
-                            <Typography variant="subtitle1" gutterBottom>
-                                Mentored sessions: - 12
-                            </Typography>
-                        </ListItemIcon>
+                {[{name: 'Nicci Troiani', text: 'Mentored sessions: 12'}, {name: 'George Fields', text: 'Mentored sessions: 9'}, {name: 'Jones Dermot', text: 'Mentored sessions: 6'}, {name: 'Jane Doe', text: 'Mentored sessions: 2'}].map((item, index) => (
+                    <ListItem key={item.name}>
+                        <ListItemAvatar>
+                            <Avatar alt={item.name} src="/static/images/avatar/1.jpg" />
+                        </ListItemAvatar>
+                        <ListItemText primary={item.name} secondary={item.text} />
                     </ListItem>
                 ))}
             </List>
             <Divider />
+            <ListSubheader>Most Active Mentees</ListSubheader>
             <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>ICON</ListItemIcon>
-                        <ListItemText primary={text} />
+                {[{name: 'Nicci Troiani', text: 'Participated sessions: 12'}, {name: 'George Fields', text: 'Participated sessions: 9'}, {name: 'Jones Dermot', text: 'Participated sessions: 6'}, {name: 'Jane Doe', text: 'Participated sessions: 2'}].map((item, index) => (
+                    <ListItem key={item.name}>
+                        <ListItemAvatar>
+                            <Avatar alt={item.name} src="/static/images/avatar/1.jpg" />
+                        </ListItemAvatar>
+                        <ListItemText primary={item.name} secondary={item.text} />
                     </ListItem>
                 ))}
             </List>
